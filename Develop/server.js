@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 require("./routes/htmlroutes")(app);
+// require("./routes/apiroutes")(app);
 
 // Starts the server to begin listening
 // =============================================================
