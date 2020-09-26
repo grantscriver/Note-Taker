@@ -6,14 +6,6 @@
 
 This application lets users save and delete notes. The front-end is handled through HTML routing, and the back-end is handled through API routing.
 
-## Table of Contents
-
-- [Description](#description)
-- [License](#license)
-- [Contributions](#contributions)
-- [Test](#test)
-- [Questions](#questions)
-
 ## License:
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
