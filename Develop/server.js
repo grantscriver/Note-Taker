@@ -15,7 +15,7 @@ const PORT = 3000 || process.env.PORT;
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
+// Required the route files
 require("./routes/htmlroutes")(app);
 require("./routes/apiroutes")(app);
 
