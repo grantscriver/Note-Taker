@@ -11,4 +11,9 @@ module.exports = function (app) {
     fs.writeFileSync("./db/db.json", JSON.stringify(noteData));
     res.json(noteData);
   });
+  app.delete("/api/notes/:id", function (req, res) {
+    const thisId = req.params.id;
+    noteData = JSON.parse(fs.readFileSync("./db/db.json"));
+    noteData = noteData.filter((tempElement) => tempElement.id != thisId);
+  });
 };
