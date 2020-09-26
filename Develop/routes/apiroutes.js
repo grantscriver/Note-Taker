@@ -15,5 +15,7 @@ module.exports = function (app) {
     const thisId = req.params.id;
     noteData = JSON.parse(fs.readFileSync("./db/db.json"));
     noteData = noteData.filter((tempElement) => tempElement.id != thisId);
+    fs.writeFileSync("./db/db.json", JSON.stringify(noteData));
+    res.json(noteData);
   });
 };
