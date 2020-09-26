@@ -1,17 +1,14 @@
-/*
 const fs = require("fs");
-*/
-const noteData = require("../db/db");
 
 module.exports = function (app) {
-  console.log("in module exports");
   app.get("/api/notes", function (req, res) {
-    console.log("in API routes get function");
-    res.json(true);
+    noteData = JSON.parse(fs.readFileSync("./db/db.json"));
+    res.json(noteData);
   });
   app.post("/api/notes", function (req, res) {
-    console.log("in API routes post function");
     noteData.push(req.body);
-    res.json(true);
+    req.body.id = Math.random();
+    fs.writeFileSync("./db/db.json", JSON.stringify(noteData));
+    res.json(noteData);
   });
 };
