@@ -1,8 +1,8 @@
 # Note Taker
 
-![Note Taker site example](./public/assets/images/notetakersite.jpg)
-
 [Heroku App](https://grant-note-taker.herokuapp.com/)
+
+![Note Taker site example](./public/assets/images/notetakersite.jpg)
 
 ## Description
 
